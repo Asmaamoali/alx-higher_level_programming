@@ -23,3 +23,10 @@ class BaseGeometry:
             raise TabError("<name> must be an integer")
         if value <= 0 :
             raise TabError("<name> must be greater than 0")
+        
+class Rectangle (BaseGeometry):
+    def __init__(self, width, height):
+        self.integer_validator("width" , width)
+        self.width = width
+        self.integer_validator("height" , height)
+        self.height = height
